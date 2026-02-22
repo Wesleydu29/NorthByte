@@ -1,0 +1,32 @@
+
+body {
+    padding: 20px;
+    font-family: "Alyamama", serif;
+    font-weight: 700;
+    background: #FDFBD4;
+}
+header {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 100px;
+    background-color: transparent;
+    box-shadow: inset 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.navbar a {
+    font-size: 1.5em;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
