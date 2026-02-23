@@ -3,8 +3,8 @@ body {
     padding: 20px;
     font-family: "Alyamama", serif;
     font-weight: 700;
-    background: #FDFBD4;
 }
+
 header {
     width: 100%;
     height: 10vh;
@@ -14,19 +14,35 @@ header {
 }
 
 .navbar{
+    position: relative;
     width: 80%;
     height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+.link {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(99, 98, 83, 0.01);
     border-radius: 100px;
-    background-color: transparent;
+    background: rgba(99, 98, 83, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(10px);
     box-shadow: inset 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.5s;
+    overflow: hidden;
+    
 }
 .navbar a {
     font-size: 1.5em;
     color: black;
     cursor: pointer;
     text-decoration: none;
+}
+.link:hover{
+    transform: scale(1.1);
 }
