@@ -1,3 +1,24 @@
+@keyframes in-from-middle {
+    from {
+        opacity: 0;
+        transform: scale(.8) translateY(15vh);
+    }
+}
+
+@keyframes in-from-left {
+    from {
+        opacity: 0;
+        transform: scale(.8) rotateZ(-90deg) translateY(15vh);
+    }
+}
+
+@keyframes in-from-right {
+    from {
+        opacity: 0;
+        transform: scale(.8) rotateZ(90deg) translateY(15vh);
+    }
+}
+
 .projets {
     margin-top: 10%;
     width: 100%;
@@ -7,8 +28,8 @@
     text-align: center;
 
 }
-.projets .container img {
-    width: 40%;
+.projets .container img, video {
+    width: 100%;
     height: 600px;
     object-fit: cover;
     clip-path: inset(0% round 0px);
@@ -16,9 +37,25 @@
     @media (prefers-reduced-motion: no-preference){
         transition: scale .2s ease, clip-path .2s ease;
 
-        &:hover {
-            scale: 1.2;
-            clip-path: inset(10% round 20px);
+    }
+    @media (prefers-reduced-motion: no-preference) {
+        @supports (animation-timeline: view()) {
+            animation: in-from-middle both;
+            animation-timeline: view();
+            animation-range: contain 0% contain 50%;
+            transform-origin: 50% 100vh;
+
+            &:nth-child(3n + 1) {
+                animation-name: in-from-left;
+            }
+
+            &:nth-child(3n + 2) {
+                animation-name: in-from-middle;
+            }
+
+            &:nth-child(3n + 3) {
+                animation-name: in-from-right;
+            }
         }
     }
 }
