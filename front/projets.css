@@ -18,6 +18,26 @@
         transform: scale(.8) rotateZ(90deg) translateY(15vh);
     }
 }
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fade-out {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
 
 .projets {
     margin-top: 10%;
@@ -58,4 +78,24 @@
             }
         }
     }
+}
+.wrapper {
+    position: relative;
+    display: block;
+}
+.wrapper p {
+    position: absolute;
+    width: 10vw;
+    height: 5vh;
+    border-radius: 50px;
+    background-color: white;
+    color: black;
+    font-size: 3em;
+    top: 50%;
+    right: 25%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
 }
