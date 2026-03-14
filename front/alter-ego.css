@@ -1,6 +1,7 @@
 :root {
     --color-face: #654736;
     --black: #000000;
+    --lips: #252222;
 }
 .canvas {
     width: 100%;
@@ -8,10 +9,48 @@
     margin-top: 10%;
 }
 .face {
+    position: relative;
     width: 20%;
     height: 60%;
     top: 10%;
     background-color: var(--color-face);
     border: 1vmin solid;
-    border-radius: 0 20% 50% 70% / 50% ;
+    border-radius: 0 0 50% 50% / 40% ;
+}
+
+.mouth {
+    position: absolute;
+    width: 40%;
+    height: 3.5vmin;
+    background-color: var(--lips);
+    top: 70%;
+    left: 30%;
+    transform: rotate(5deg);
+    border-top: 0.6vmin solid var(--black);
+    border-radius: 50%;
+}
+
+.eye {
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    background-color: var(--black);
+    top: 20%;
+    left: 20%;
+    border-radius: 100%;
+}
+
+.eye + .eye {
+    left: 70%;
+}
+
+.nose {
+    position: absolute;
+    width: 5%;
+    height: 20%;
+    top: 45%;
+    left: 55%;
+    border-radius: 50%;
+    border: 0.5vmin solid transparent;
+    border-right: 0.5vmin solid;
 }
