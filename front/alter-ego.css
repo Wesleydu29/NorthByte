@@ -192,7 +192,6 @@
     width: 50%;
     height: 50%;
     display: flex;
-    justify-content: center;
     align-items: center;
     padding: 15px;
 
@@ -220,4 +219,6 @@
 }
 .introducing p {
     font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
 }
