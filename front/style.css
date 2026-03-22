@@ -9,6 +9,8 @@ body {
     font-family: "Cal Sans", sans-serif;
     font-weight: 400;
     overflow-x: hidden;
+    margin: 0 auto;
+    max-width: 1920px;
 }
 
 header {
