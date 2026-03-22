@@ -63,7 +63,7 @@ face.addEventListener('mouseleave', () => {
 
 const texte = document.querySelector('.texte');
 
-function typeWriting(texte, text, vitesse = 80) {
+function typeWriting(texte, text, vitesse = 50) {
     texte.textContent = '';
 
     let i = 0;
